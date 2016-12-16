@@ -1,2 +1,10 @@
 2016.12.16
-deviation syntax
+deviation syntax 
+
+norm(0,1,2)
+sparse coding: X(observation)= D(dictionary) x a(sparse representation)
+s.t = subject to
+RMS: root mean square
+RMSE: root mean square error
+MSE: mean square error
+SVD: singular value decomposition
