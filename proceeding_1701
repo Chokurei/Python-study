@@ -6,4 +6,4 @@ https://github.com/matplotlib/matplotlib/issues/4280/
 3. 用plt打开图片，cv2打开图片时候顺序为bgr
 4. resize的时候，用cv2
 
-遗留问题：改变图片大小的代码没改好，修改好之后再修改接口
+遗留问题 看看random的那个库 程序改到函数 get_data_from_img了 学习一下  
