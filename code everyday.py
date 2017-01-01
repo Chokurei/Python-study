@@ -55,10 +55,13 @@ x[1,2,...] = x[1,2,:,:,:],
 ＃opencv读和保存图片的时候是bgr的顺序 所以要用opencv的话 就要一起用 不会有问题
 cv2.imwrite(name,image)# better to save binary images
 cv2.resize(image,(255,255))
+cv2.imread(img,0)
+
 
 
 5. os
 os.rename(filename, new_filename)
+Script_name=os.path.basename(__file__)
 
 6.matplotlib
 #当边长为奇数时候 有bug 改用opencv
