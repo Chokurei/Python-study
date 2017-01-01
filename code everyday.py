@@ -52,8 +52,8 @@ a = np.arange(12).reshape(3,4) b = a > 4   a[b]
 x[1,2,...] = x[1,2,:,:,:],
 
 4. opencv
-# better to save binary images
-cv2.imwrite(name,image)
+cv2.imwrite(name,image)# better to save binary images
+cv2.resize(image,(255,255))
 
 
 5. os
