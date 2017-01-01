@@ -51,3 +51,13 @@ a = np.arange(12).reshape(3,4) b = a > 4   a[b]
 ## The dots (...) represent as many colons as needed to produce a complete indexing tuple. 
 x[1,2,...] = x[1,2,:,:,:],
 
+4. opencv
+# better to save binary images
+cv2.imwrite(name,image)
+
+
+5. os
+os.rename(filename, new_filename)
+
+
+
