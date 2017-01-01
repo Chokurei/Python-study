@@ -1,5 +1,7 @@
 01.01
 1. 用imsave保存图片的时候，为什么奇数边长会自动保存成偶数边长
+https://github.com/matplotlib/matplotlib/issues/4280/
+
 2. 用imsave保存2纬图片时候，cmap＝Greys
 3. 用plt打开图片，cv2打开图片时候顺序为bgr
 4. resize的时候，用cv2
