@@ -51,13 +51,14 @@ a = np.arange(12).reshape(3,4) b = a > 4   a[b]
 ## The dots (...) represent as many colons as needed to produce a complete indexing tuple. 
 x[1,2,...] = x[1,2,:,:,:],
 
+data=np.transpose(data,(0,3,1,2))
+data = data.astype('float32')
+
 4. opencv
 ＃opencv读和保存图片的时候是bgr的顺序 所以要用opencv的话 就要一起用 不会有问题
 cv2.imwrite(name,image)# better to save binary images
 cv2.resize(image,(255,255))
 cv2.imread(img,0)
-
-
 
 5. os
 os.rename(filename, new_filename)
@@ -65,3 +66,13 @@ Script_name=os.path.basename(__file__)
 
 6.matplotlib
 #当边长为奇数时候 有bug 改用opencv
+
+7. random
+list = random.sample(range(1000),num)
+
+8. print
+print("Accuracy: {0:.4f}".format(train_acc))
+
+9.others
+from shutil import copyfile
+	copyfile(src,file)
