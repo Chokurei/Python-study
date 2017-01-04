@@ -66,6 +66,7 @@ Script_name=os.path.basename(__file__)
 
 6.matplotlib
 #当边长为奇数时候 有bug 改用opencv
+cmap = 'gray' or 'Greys' are different
 
 7. random
 list = random.sample(range(1000),num)
