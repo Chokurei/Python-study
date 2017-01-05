@@ -20,6 +20,11 @@ __name__ =='__main__'
 from collections import deque
 del popleft
 stack and queue in list
+index = list.index(element)
+
+indexes=[1,30,40,5]
+for file_name in [file_names[x] for x in indexes]:
+
 
 #dictionary
 ##https://docs.python.org/2/tutorial/datastructures.html
@@ -53,13 +58,24 @@ x[1,2,...] = x[1,2,:,:,:],
 
 data=np.transpose(data,(0,3,1,2))
 data = data.astype('float32')
+template.shape[::-1]
 
 4. opencv
 ＃opencv读和保存图片的时候是bgr的顺序 所以要用opencv的话 就要一起用 不会有问题
 cv2.imwrite(name,image)# better to save binary images
-cv2.resize(image,(255,255))
+resized = cv2.resize(img,(32,32), interpolation = cv2.INTER_LINEAR)
 cv2.imread(img,0)
 
+imread()
+uint8 : 0~255
+float : 0~1
+
+#match templete:
+http://www.cnblogs.com/xrwang/archive/2010/02/05/MatchTemplate.html
+methods = ['cv2.TM_CCOEFF', 'cv2.TM_CCOEFF_NORMED', 'cv2.TM_CCORR',
+            'cv2.TM_CCORR_NORMED', 'cv2.TM_SQDIFF', 'cv2.TM_SQDIFF_NORMED']
+res = cv2.matchTemplate(img,template,method)
+	
 5. os
 os.rename(filename, new_filename)
 Script_name=os.path.basename(__file__)
@@ -77,3 +93,8 @@ print("Accuracy: {0:.4f}".format(train_acc))
 9.others
 from shutil import copyfile
 	copyfile(src,file)
+	
+10. glob
+path = os.path.join('..','data','train',fld,'*jpg')
+files = glob.glob(path)
+
