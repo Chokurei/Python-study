@@ -98,3 +98,19 @@ from shutil import copyfile
 path = os.path.join('..','data','train',fld,'*jpg')
 files = glob.glob(path)
 
+11. sclearn
+#K-Folds cross validation iterator
+from sklearn.cross_validation import KFold
+	kf = KFold(len(X_train), n_folds=n_fold, shuffle=True, random_state=random_state)
+	for train_idx, cv_idx in kf: 
+
+12. keras
+callbacks = [EarlyStopping(monitor='val_loss', patience=3, verbose=0)]
+model.fit(X_train, Y_train, batch_size=batch_size, nb_epoch=nb_epoch,
+      shuffle=True, verbose=2, validation_data=(X_valid, Y_valid),
+      callbacks=callbacks)
+
+13. pandas
+result1 = pd.DataFrame(predictions, columns=['ALB', 'BET', 'DOL', 'LAG', 'NoF', 'OTHER', 'SHARK', 'YFT'])
+result1.loc[:, 'image'] = pd.Series(test_id, index=result1.index)
+
