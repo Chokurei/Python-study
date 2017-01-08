@@ -53,3 +53,13 @@ https://www.kaggle.com/narae78/the-nature-conservancy-fisheries-monitoring/fish-
 
 01.07
 不同种类的transfer方法 有待实现
+ 搞定结果 尝试了 但是效果不好 还要补充实验
+ 
+01.08
+ 把行程都定下来了 
+ 尝试了transferlearning
+ 遗留问题
+ 1. 有两张票的信息没有收到 需要进行核实
+ 2. 还要增加行李的购买
+ 3. 代码修改 transfer
+ 4. 练剑 
