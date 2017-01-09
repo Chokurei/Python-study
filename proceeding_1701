@@ -60,6 +60,12 @@ https://www.kaggle.com/narae78/the-nature-conservancy-fisheries-monitoring/fish-
  尝试了transferlearning
  遗留问题
  1. 有两张票的信息没有收到 需要进行核实
+  解决了
  2. 还要增加行李的购买
  3. 代码修改 transfer
+  进行中
  4. 练剑 
+ 
+ 01.09
+ 修改了两个transfer的代码 但是都有问题 还需要调试
+ 另外 model中的设置 shape 有问题 但是奇怪的是版本四可以运行
