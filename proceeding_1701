@@ -62,10 +62,20 @@ https://www.kaggle.com/narae78/the-nature-conservancy-fisheries-monitoring/fish-
  1. 有两张票的信息没有收到 需要进行核实
   解决了
  2. 还要增加行李的购买
+  解决了
  3. 代码修改 transfer
-  进行中
+  解决了
  4. 练剑 
+  解决了 
  
  01.09
  修改了两个transfer的代码 但是都有问题 还需要调试
+ 解决了 但是效果不好
  另外 model中的设置 shape 有问题 但是奇怪的是版本四可以运行
+ 解决了
+ 
+ 遗留问题：
+ 总结实验， 做ppt
+ 
+ 
+ 
