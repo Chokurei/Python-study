@@ -110,6 +110,8 @@ model.fit(X_train, Y_train, batch_size=batch_size, nb_epoch=nb_epoch,
       shuffle=True, verbose=2, validation_data=(X_valid, Y_valid),
       callbacks=callbacks)
 
+model.add(Convolution2D(12,4,4, border_mode='same',trainable=False))
+
 13. pandas
 result1 = pd.DataFrame(predictions, columns=['ALB', 'BET', 'DOL', 'LAG', 'NoF', 'OTHER', 'SHARK', 'YFT'])
 result1.loc[:, 'image'] = pd.Series(test_id, index=result1.index)
