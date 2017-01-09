@@ -77,5 +77,21 @@ https://www.kaggle.com/narae78/the-nature-conservancy-fisheries-monitoring/fish-
  遗留问题：
  总结实验， 做ppt
  
+     对比六组实验
+     1. transfer based
+       1. no freeze, retrain                         transfer 1
+       2. no freeze, add layer, retrain              transfer 4
+       3. freeze, retrain                            transfer 2
+       4. freeze, add layer, retrain                 transfer 3
+     2. nomal based
+      1. retrain model by new data                   pixel based building detection.py
+      2. origianl model                              pixel based building detection_test.py
+     需要考虑： 
+     1. add layer 与否的影响
+     2. 由于在特征提取层提取不到特征， 所带来的影响， 丰富的特征的重要性
+     3. 时间上进行对比， 准确值进行对比
+  
+ 
+ 
  
  
