@@ -90,6 +90,13 @@ https://www.kaggle.com/narae78/the-nature-conservancy-fisheries-monitoring/fish-
      1. add layer 与否的影响
      2. 由于在特征提取层提取不到特征， 所带来的影响， 丰富的特征的重要性
      3. 时间上进行对比， 准确值进行对比
+     
+     解决了
+01.10
+待办的事情： 
+  学长的图像转换算法， 
+  学习 xgboost
+  专注于写文章
   
  
  
