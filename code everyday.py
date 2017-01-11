@@ -60,6 +60,8 @@ data=np.transpose(data,(0,3,1,2))
 data = data.astype('float32')
 template.shape[::-1]
 
+data_value = np.delete(data[idx],19)
+
 4. opencv
 ＃opencv读和保存图片的时候是bgr的顺序 所以要用opencv的话 就要一起用 不会有问题
 cv2.imwrite(name,image)# better to save binary images
@@ -93,6 +95,10 @@ print("Accuracy: {0:.4f}".format(train_acc))
 9.others
 from shutil import copyfile
 	copyfile(src,file)
+# make and write file
+script=open(os.path.join(output_file,'Dodge_'+str(idx)+'.txt'),'a')
+script.write('1'+'\n')
+script.close()
 	
 10. glob
 path = os.path.join('..','data','train',fld,'*jpg')
@@ -109,6 +115,7 @@ callbacks = [EarlyStopping(monitor='val_loss', patience=3, verbose=0)]
 model.fit(X_train, Y_train, batch_size=batch_size, nb_epoch=nb_epoch,
       shuffle=True, verbose=2, validation_data=(X_valid, Y_valid),
       callbacks=callbacks)
+
 
 model.add(Convolution2D(12,4,4, border_mode='same',trainable=False))
 
