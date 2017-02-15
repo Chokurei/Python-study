@@ -145,3 +145,8 @@ model.add(Convolution2D(12,4,4, border_mode='same',trainable=False))
 result1 = pd.DataFrame(predictions, columns=['ALB', 'BET', 'DOL', 'LAG', 'NoF', 'OTHER', 'SHARK', 'YFT'])
 result1.loc[:, 'image'] = pd.Series(test_id, index=result1.index)
 
+14. csv
+with open('result.csv','w') as f:
+	writer=csv.writer(f)
+	writer.writerows(data)
+
