@@ -25,14 +25,36 @@ index = list.index(element)
 indexes=[1,30,40,5]
 for file_name in [file_names[x] for x in indexes]:
 
+a = [66.25, 333, 333, 1, 1234.5]
+a.count(333)
+a.insert(2,-1)
+a.index(333)
+a.remove(333)
+a.sort()
+a.pop()
+a.reverse()
+del a[0]
 
-#dictionary
+from collections import deque
+queue = deque(["Eric", "John", "Michael"])
+queue.append("Terry")           # Terry arrives
+queue.append("Graham")          # Graham arrives
+queue.popleft()                 # The first to arrive now leaves
+'Eric'
+queue.popleft()                 # The second to arrive now leaves
+'John'
+queue                           # Remaining queue in order of arrival
+deque(['Michael', 'Terry', 'Graham'])
+
+#set
 ##https://docs.python.org/2/tutorial/datastructures.html
 basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']
 fruit = set(basket)               # create a set without duplicates
 a = set('abracadabra')
 b = set('alacazam')
-a - b      a | b        a & b    a ^ b   
+a - b      a | b        a & b    a ^ b 
+
+#dictionary
 tel = {'jack': 4098, 'sape': 4139}
 dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])
 dict(sape=4139, guido=4127, jack=4098)
