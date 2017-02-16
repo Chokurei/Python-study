@@ -145,6 +145,33 @@ model.add(Convolution2D(12,4,4, border_mode='same',trainable=False))
 result1 = pd.DataFrame(predictions, columns=['ALB', 'BET', 'DOL', 'LAG', 'NoF', 'OTHER', 'SHARK', 'YFT'])
 result1.loc[:, 'image'] = pd.Series(test_id, index=result1.index)
 
+s = pd.Series(np.nan, index=[49,48,47,46,45, 1, 2, 3, 4, 5])
+s.iloc[:3]
+49   NaN
+48   NaN
+47   NaN
+s.loc[:3]
+49   NaN
+48   NaN
+47   NaN
+46   NaN
+45   NaN
+1    NaN
+2    NaN
+3    NaN
+
+
+df = pd.DataFrame(np.arange(25).reshape(5,5), 
+                      index=list('abcde'),
+                      columns=['x','y','z', 8, 9])
+Using ix, we can slice the rows by label and the columns by position (note that for the columns, ix default to position-based slicing since the label 4 is not a column name):
+df.ix[:'c', :4]
+    x   y   z   8
+a   0   1   2   3
+b   5   6   7   8
+c  10  11  12  13
+
+
 14. csv
 with open('result.csv','w') as f:
 	writer=csv.writer(f)
