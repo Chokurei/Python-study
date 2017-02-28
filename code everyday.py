@@ -171,9 +171,15 @@ a   0   1   2   3
 b   5   6   7   8
 c  10  11  12  13
 
+new_dict.setdefault(address, []).append(data_list[idx])
 
 14. csv
 with open('result.csv','w') as f:
 	writer=csv.writer(f)
 	writer.writerows(data)
+	
+with open(filepath,"r") as f:
+        reader = csv.reader(f)
+        header = next(reader)
+    
 
