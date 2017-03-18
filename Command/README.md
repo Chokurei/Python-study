@@ -8,10 +8,18 @@
 ## dictionary
 
 ## pandas
+    build_old = build_old.rename(columns={'所在地':'所在地_地番', '延べ面積':'総延べ面積'})
+    build_old = pd.read_csv(build_old_name, usecols=[0,1,4])
 
+## csv
+    data = {}
+    with open(filepath,"r") as f:
+        reader = csv.reader(f)
+    for row in reader:
+        citycode = str(row[0])
+        data[citycode] = cityname
 
 ## others
-
 
 # Command
 ---------------------
