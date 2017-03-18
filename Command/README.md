@@ -12,7 +12,14 @@
 
 # Command
 ---------------------
-# 
+
+## SSH
+    $ SSH name@domain # log in
+    $ scp <source> <distination> # download and upload
+        eg
+    
+## Others
+    $ wget URL -O path
 
 
 
