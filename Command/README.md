@@ -1,15 +1,48 @@
 # Python
 ---------------------
+## basic
+    str.split()
+    
+    n = 0
+    if n == 0:
+        output = merge1
+        n += 1
+    else:
+        output = pd.concat([output, merge1]) 
+    
 ## numpy
 
 
 ## list
+    list(str()) # split sentence
 
 ## dictionary
+    data_list = list(data)
+    new_dict = {}
+    for idx in range(0,len(data_list)):
+        address = data_list[idx][5]
+        address_ = address.split(' ')
+        if len(address_) > 2:
+            address_ = "".join([address_[0],address_[1]])
+        else:
+            citycode = str(int(data_list[idx][13]))
+            if citycode in city_dict:
+                address_ = city_dict[citycode]
+            else:
+                address_ = "other"
+        new_dict.setdefault(address_, []).append(data_list[idx])
+    return new_dict
+
 
 ## pandas
     build_old = build_old.rename(columns={'所在地':'所在地_地番', '延べ面積':'総延べ面積'})
     build_old = pd.read_csv(build_old_name, usecols=[0,1,4])
+    merge1 = merge1.reindex(columns=['Uniq_ID','ID2','住宅地図ID','ユーザーID'])
+    dff2=pd.concat([build_new_clean, build_old_clean, dff],axis=0)
+    merge1 = pd.concat([dff2,reinforcement],1)
+    build_old_clean = build_old_clean.drop_duplicates(['マッチ用物件名'], keep='last')
+    dff = pd.merge(build_old_clean, build_new_clean, on=['マッチ用物件名'],how='inner')
+    
 
 ## csv
     data = {}
