@@ -9,6 +9,10 @@
         n += 1
     else:
         output = pd.concat([output, merge1]) 
+        
+    for a in data_name:
+        no_pon = ''.join(e for e in a if e.isalnum())
+        name_no_pun.append(no_pon)
     
 ## numpy
 
@@ -42,6 +46,7 @@
     merge1 = pd.concat([dff2,reinforcement],1)
     build_old_clean = build_old_clean.drop_duplicates(['マッチ用物件名'], keep='last')
     dff = pd.merge(build_old_clean, build_new_clean, on=['マッチ用物件名'],how='inner')
+    data = data.sort(['マッチ用物件名'])
     
 
 ## csv
