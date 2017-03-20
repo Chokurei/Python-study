@@ -53,9 +53,9 @@
     data = {}
     with open(filepath,"r") as f:
         reader = csv.reader(f)
-    for row in reader:
-        citycode = str(row[0])
-        data[citycode] = cityname
+        for row in reader:
+            citycode = str(row[0])
+            data[citycode] = cityname
 
 ## others
 
